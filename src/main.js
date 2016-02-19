@@ -1,3 +1,4 @@
+require('./css/frozen.css')
 import Vue from 'vue'
 import App from './App'
 
