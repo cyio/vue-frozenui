@@ -1,22 +1,38 @@
 <template>
     <div id="app">
-      <hello></hello>
-      <footer class="ui-footer ui-footer-btn">
-          <ul class="ui-tiled ui-border-t">
-              <li data-href="index.html" class="ui-border-r"><div>基础样式</div></li>
-              <li data-href="ui.html" class="ui-border-r"><div>UI组件</div></li>
-              <li data-href="js.html"><div>JS插件</div></li>
-          </ul>
-      </footer>
+      <app-header></app-header>
+      <app-footer></app-footer>
+      <section class="ui-container ui-center">
+          <div class="ui-flex ui-flex-pack-start">
+              <div>左</div><div>左</div>
+          </div>
+          <div class="ui-flex ui-flex-pack-center">
+              <div>中</div><div>中</div>
+          </div>
+          <div class="ui-flex ui-flex-pack-end">
+              <div>右</div><div>右</div>
+          </div>
+          <div class="ui-flex ui-flex-align-start">
+              <div>上</div><div>上</div>
+          </div>
+          <div class="ui-flex  ui-flex-align-center">
+              <div>中</div><div>中</div>
+          </div>
+          <div class="ui-flex ui-flex-align-end">
+              <div>下</div><div>下</div>
+          </div>
+      </section>
     </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import AppHeader from './components/Header'
+import AppFooter from './components/Footer'
 
 export default {
   components: {
-    Hello
+    AppHeader,
+    AppFooter
   }
 }
 </script>
