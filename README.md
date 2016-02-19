@@ -1,4 +1,4 @@
-# vue-frozen
+# vue-frozenui
 
 > A Vue.js project
 
