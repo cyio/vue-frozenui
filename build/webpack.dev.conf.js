@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var config = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 // eval-source-map is faster for development
 config.devtool = 'eval-source-map'
@@ -27,7 +28,20 @@ config.plugins = (config.plugins || []).concat([
     filename: 'index.html',
     template: 'src/index.html',
     inject: true
-  })
+  }),
+  new BrowserSyncPlugin(
+      // BrowserSync options
+      {
+        host: '127.0.0.1',
+        port: 8080,
+        proxy: 'http://127.0.0.1:8080/',
+        logConnections: false,
+        notify: false
+      },
+      // plugin options
+      {
+        reload: true
+    })
 ])
 
 module.exports = config
