@@ -29,19 +29,19 @@ config.plugins = (config.plugins || []).concat([
     template: 'src/index.html',
     inject: true
   }),
-  new BrowserSyncPlugin(
-      // BrowserSync options
-      {
-        host: '127.0.0.1',
-        port: 8080,
-        proxy: 'http://127.0.0.1:8080/',
-        logConnections: false,
-        notify: false
-      },
-      // plugin options
-      {
-        reload: true
-    })
+  // new BrowserSyncPlugin(
+  //     // BrowserSync options
+  //     {
+  //       host: '127.0.0.1',
+  //       port: 8080,
+  //       proxy: 'http://127.0.0.1:8080/',
+  //       logConnections: false,
+  //       notify: false
+  //     },
+  //     // plugin options
+  //     {
+  //       reload: true
+  //   })
 ])
 
 module.exports = config
